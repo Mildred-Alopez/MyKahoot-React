@@ -27,6 +27,7 @@ const MostrarPregunta = () => {
         navigate('/')
     }
 
+
     useEffect(() => {
         const prueba = preguntasLocal.find((item) => item.codigo == codigo)
         setTest(prueba)
