@@ -44,11 +44,11 @@ const LayoutClient = () => {
                         <div className="wave"></div>
                         <div className="infotop">
                             <h1 className="mb-5">𝚆𝚎𝚕𝚌𝚘𝚖𝚎 𝚝𝚘 𝙺𝚊𝚑𝚘𝚘𝚝 𝙲𝚑𝚊𝚗𝚐𝚘!</h1>
-                            <p><span className="fw-bold text-warning ">The autor game is: </span> {testClient?.autor} </p>
-                            <p><span className="fw-bold text-warning">Time to take test: </span> {`${testClient?.time} Minutos`}</p>
-                            <p><span className="fw-bold text-warning">Total questions in test: </span> {testClient?.preguntas?.length} </p>
+                            <p><span className="fw-bold text-warning ">El autor del juego es: </span> {testClient?.autor} </p>
+                            <p><span className="fw-bold text-warning">Tiempo para realizar la prueba: </span> {`${testClient?.time} Minutos`}</p>
+                            <p><span className="fw-bold text-warning">Total de preguntas en el examen: </span> {testClient?.preguntas?.length} </p>
                             <button className="button" onClick={start}>
-                                <span className="button-content">Start </span>
+                                <span className="button-content">Comenzar </span>
                             </button>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ import './style.css'
 
 const LayoutAdmin = () => {
 
-    const { preguntasLocal, copyLink } = useContext(ContextTest)
+    const { preguntasLocal, copyLink,testDelete } = useContext(ContextTest)
 
     return (
         <>
@@ -35,10 +35,10 @@ const LayoutAdmin = () => {
                                 <th>Autor</th>
                                 <th>Total de preguntas</th>
                                 <th>Codigo</th>
-                                <th>Opciones</th>
+                                <th className='text-center'>Opciones</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className='text-center'>
                             {preguntasLocal?.map((item, index) => (
                                 < tr key={index}>
                                     <td>{index + 1}</td>
@@ -47,7 +47,10 @@ const LayoutAdmin = () => {
                                     <td>{item.autor}</td>
                                     <td>{item.preguntas?.length}</td>
                                     <td>{item.codigo}</td>
-                                    <td><button onClick={() => copyLink(item.codigo)} className='booton'>Copy Link</button></td>
+                                    <td><button onClick={() => copyLink(item.codigo)} className='booton'>Copiar Enlace</button>
+                                    <button onClick={() => testDelete(index)} className='bootonDelete'>Eliminar</button>
+                                    </td>
+                                    
                                 </tr>
                             ))}
                         </tbody>

@@ -35,7 +35,7 @@ const MostrarPregunta = () => {
 
     return (
         <>
-            {finish ? <div>
+            {finish ? <div className="border border-white  p-5 mt-5 rounded-5">
                 <div className="wrappers">
                     <div className="circle-1"></div>
                     <div className="circle-2"></div>
@@ -47,6 +47,8 @@ const MostrarPregunta = () => {
                             </div>
                         </section>
                     </div>
+                    <div className="circle-3"></div>
+                    <div className="circle-4"></div>
                 </div>
                 <button className="buttons">
                     <svg
@@ -83,7 +85,7 @@ const MostrarPregunta = () => {
                                     variant="primary"
                                     size="lg"
                                     style={{ width: '400px' }} >
-                                    <div className="d-flex flex-row gap-5">
+                                    <div className="d-flex flex-row gap-2">
                                         <i className="bi bi-diamond-fill po"></i>
                                         <h2 className="po">{test?.preguntas[cont]?.respuesta1}</h2>
                                     </div>
@@ -94,7 +96,7 @@ const MostrarPregunta = () => {
                                     variant="danger"
                                     size="lg"
                                     style={{ width: '400px' }}>
-                                    <div className="d-flex flex-row gap-5">
+                                    <div className="d-flex flex-row gap-2">
                                         <i className="bi bi-triangle-fill po"></i>
                                         <h2 className="po">{test?.preguntas[cont]?.respuesta2}</h2>
                                     </div>
@@ -107,7 +109,7 @@ const MostrarPregunta = () => {
                                     variant="warning"
                                     size="lg"
                                     style={{ width: '400px' }}>
-                                    <div className="d-flex flex-row gap-5">
+                                    <div className="d-flex flex-row gap-2">
                                         <i className="bi bi-circle-fill po"></i>
                                         <h2 className="po">{test?.preguntas[cont]?.respuesta3}</h2>
                                     </div>
@@ -118,7 +120,7 @@ const MostrarPregunta = () => {
                                     variant="success"
                                     size="lg"
                                     style={{ width: '400px' }}>
-                                    <div className="d-flex flex-row gap-5">
+                                    <div className="d-flex flex-row gap-2">
                                         <i className="bi bi-square-fill po"></i>
                                         <h2 className="po">{test?.preguntas[cont]?.respuesta4}</h2>
                                     </div>

@@ -242,10 +242,10 @@ const CreateTest = () => {
                                 </Modal.Body>
                                 <Modal.Footer>
                                     <button className="boton-elegante" onClick={handleClose}>
-                                        Close
+                                        Cerrar
                                     </button>
                                     <button className="boton-elegante" onClick={handleSubmit(onSubmit)}>
-                                        Save Changes
+                                        Guardar
                                     </button>
                                 </Modal.Footer>
                             </Modal>

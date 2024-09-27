@@ -6,7 +6,7 @@ export const ContextTest = createContext()
 
 const ContextTestProvider = ({ children }) => {
     //////////Estados\\\\\\\\
-    const [preguntasLocal, setPreguntasLocal] = useState(JSON.parse(localStorage.getItem('tests')))
+    const preguntasLocal = JSON.parse(localStorage.getItem('tests'))
     const [test, setTest] = useState()
     const [correcta, setCorrectas] = useState(0)
     const [incorrecta, setIncorrecta] = useState(0)
@@ -20,7 +20,6 @@ const ContextTestProvider = ({ children }) => {
     const [preguntas, setPreguntas] = useState([])
     const [notFound, setNotFound] = useState(false)
     const [testClient, setTestClient] = useState({})
-    
     const [showGame, setShowGame] = useState(true)
     const [count, setCount] = useState(3)
 
@@ -107,9 +106,16 @@ const ContextTestProvider = ({ children }) => {
         }
     }
 
+    const testDelete = (value) => {
+        const eliminar = preguntasLocal.filter((item, index) => index !== value)
+        localStorage.setItem('tests', JSON.stringify(eliminar))
+        setPreguntas(eliminar)
+    }
+
     return (
         <>
             <ContextTest.Provider value={{
+                testDelete,
                 preguntasLocal,
                 copyLink,
                 test,
@@ -152,7 +158,7 @@ const ContextTestProvider = ({ children }) => {
                 setNotFound,
                 testClient,
                 setTestClient,
-            
+
                 showGame,
                 setShowGame,
                 count,

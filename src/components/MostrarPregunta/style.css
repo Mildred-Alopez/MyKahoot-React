@@ -1,5 +1,5 @@
 .mov {
-    margin-top: 28%;
+    margin-top: 20%;
 }
 
 .movTi {
@@ -8,9 +8,12 @@
 
 .po {
     position: relative;
-    left: 10%;
+    left: 5%;
     font-size: 25px;
     color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -38,7 +41,7 @@
     box-shadow: 0 15px 30px -15px var(--bc-al);
     isolation: isolate;
     margin-left: 32%;
-    margin-top: 20%;
+    margin-top: 10%;
     height: 350px;
     text-align: center;
 
@@ -69,6 +72,31 @@
     height: 3rem;
     right: 35%;
     top: 3rem;
+    background-color: var(--bc-al);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.circle-3 {
+    position: absolute;
+    content: '';
+    width: 6rem;
+    height: 6rem;
+    left: 20%;
+    top: 20%;
+    transform: translate(-50%);
+    background-color: var(--bc-al);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.circle-4 {
+    position: absolute;
+    content: '';
+    width: 10rem;
+    height: 10rem;
+    right: 20%;
+    top: 10%;
     background-color: var(--bc-al);
     border-radius: 50%;
     z-index: -10;
