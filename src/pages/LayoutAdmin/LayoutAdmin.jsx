@@ -1,26 +1,32 @@
 import { useContext } from 'react';
-import { Button, Table } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { ContextTest } from '../../context/ContextTest';
-
+import './style.css'
 
 const LayoutAdmin = () => {
- 
-    const { preguntasLocal, copyLink } = useContext(ContextTest)
 
+    const { preguntasLocal, copyLink } = useContext(ContextTest)
 
     return (
         <>
-            <div className='container pt-5'>
+            <div className="m2 tit">
+                <div className="logo">
+                    Cuestionarios
+                </div>
+            </div>
+            <div className='caja'>
                 <div className='d-flex justify-content-end mb-4'>
-                    <Link
-                        to='/create'
-                        className='btn btn-primary mt-5'
-                    >Crear Test
+                    <Link to='/create'>
+                        <button className="cssbuttons-io">
+                            <span>
+                                Crear Test
+                            </span>
+                        </button>
                     </Link>
                 </div>
                 <div className='d-flex justify-content-center flex-column mt-5'>
-                    <Table responsive striped >
+                    <Table responsive striped bordered hover variant='dark'>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -33,7 +39,7 @@ const LayoutAdmin = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {preguntasLocal.map((item, index) => (
+                            {preguntasLocal?.map((item, index) => (
                                 < tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>{item.nombreTest}</td>
@@ -41,7 +47,7 @@ const LayoutAdmin = () => {
                                     <td>{item.autor}</td>
                                     <td>{item.preguntas?.length}</td>
                                     <td>{item.codigo}</td>
-                                    <td><Button onClick={() => copyLink(item.codigo)} variant={'success'}>Copy Link</Button></td>
+                                    <td><button onClick={() => copyLink(item.codigo)} className='booton'>Copy Link</button></td>
                                 </tr>
                             ))}
                         </tbody>

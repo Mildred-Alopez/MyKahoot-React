@@ -39,10 +39,13 @@ const Temporizador = ({ time, setFinish }) => {
             setFinish(true)
         }
     }, [seconds])
-    
+
     return (
         <>
-            {`${hours} : ${minutes} : ${seconds}`}
+            <div className="loaders">
+                {`${hours} : ${minutes} : ${seconds}`}
+                <span></span>
+            </div>
         </>
     );
 }

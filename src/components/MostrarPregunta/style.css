@@ -1,0 +1,128 @@
+.mov {
+    margin-top: 28%;
+}
+
+.movTi {
+    margin-bottom: 10%;
+}
+
+.po {
+    position: relative;
+    left: 10%;
+    font-size: 25px;
+    color: white;
+
+}
+
+
+
+/* From Uiverse.io by bociKond */
+.wrappers {
+    position: relative;
+    --white: #e3e3e3;
+    --bc: rgb(203, 46, 79);
+    --bc-al: rgba(203, 46, 79, 0.6);
+}
+
+.cards {
+    max-width: 340px;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-areas: "top" "bottom";
+    grid-template-rows: 20% 1fr;
+    border: 1px solid var(--bc-al);
+    border-radius: .75rem;
+    background: var(--bc-al);
+    color: var(--white);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 15px 30px -15px var(--bc-al);
+    isolation: isolate;
+    margin-left: 32%;
+    margin-top: 20%;
+    height: 350px;
+    text-align: center;
+
+}
+
+.text {
+    margin-top: 40%;
+    margin-left: 15%;
+}
+
+.circle-1 {
+    position: absolute;
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%);
+    background-color: var(--bc-al);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.circle-2 {
+    position: absolute;
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    right: 35%;
+    top: 3rem;
+    background-color: var(--bc-al);
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.tops {
+    padding: .5rem 4rem;
+    z-index: 1;
+}
+
+.bottoms {
+    z-index: 2;
+}
+
+
+
+/* From Uiverse.io by andrew-demchenk0 */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    height: 34px;
+    width: 30%;
+    border: none;
+    background: #ff362b34;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 32%;
+    margin-top: 5%;
+}
+
+.lable {
+    line-height: 20px;
+    font-size: 17px;
+    color: #ff342b;
+    letter-spacing: 1px;
+}
+
+.buttons:hover {
+    background: #ff362b52;
+}
+
+.buttons:hover .svg-icon {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

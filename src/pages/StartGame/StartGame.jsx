@@ -29,12 +29,12 @@ const StartGame = () => {
     return (
         <>
             {showGame && (
-                <div className="d-flex justify-content-center align-items-center flex-column">
+                <div className="d-flex justify-content-center align-items-center flex-column start">
                     <div className="loader mt-5 star">
                         <span className="loader-text">Empezando....</span>
                     </div>
                     <div className="loaderCircle margin">
-                        <div className="intern"><h1>{count}</h1>
+                        <div className="intern font-monospace">{count}
                         </div>
                         <div className="external-shadow">
                             <div className="central">
